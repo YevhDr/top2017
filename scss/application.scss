@@ -41,7 +41,7 @@ h1{
 
 h2 {
   text-align: center;
-  //margin-left: 10%;
+  font-family: monospace!important;
   font-size: 2rem!important;
   color: #ffffff;
   margin-bottom: 40px!important;
@@ -51,10 +51,35 @@ h2 {
 }
 h3 {
   color: $orange!important;
-  font-size: 2.3em!important;
-  line-height: 3em;
+
   margin-top: 0;
   margin-bottom: .5em;
+
+  @media #{$brk-xlarge} {
+    font-size: 2.3em!important;
+    line-height: 3em;
+  }
+
+  @media #{$brk-large} {
+    font-size: 2.3em!important;
+    line-height: 3em;
+  }
+
+  @media #{$brk-medium} {
+    font-size: 2.3em!important;
+    line-height: 3em;
+  }
+
+  @media #{$brk-spnarrow} {
+    font-size: 1.8em!important;
+    line-height: 2em;
+
+  }
+
+  @media #{$brk-iphone} {
+    font-size: 1.8em!important;
+    line-height: 3em;
+  }
 }
 
 h4 {
@@ -121,12 +146,28 @@ a:hover {
   //margin-bottom: .4em;
 }
 .photo {
-  height: 50vh;
   width:auto;
   position: relative;
   line-height: 0;
   overflow: hidden;
   margin-bottom: 3px;
+
+
+ @media only screen and #{$brk-xlarge},
+ only screen and #{$brk-large},
+ only screen and #{$brk-medium},
+ only screen and #{$brk-narrow}{
+   height: 50vh;
+  }
+
+
+
+  @media #{$brk-spnarrow},
+  #{$brk-iphone} {
+    height: 100%!important;
+  }
+
+
 }
 
 .articles {
@@ -256,12 +297,33 @@ img {
 }
 
 video {
-  //display: block;
   position: relative;
-  min-width: 100%;
   overflow: hidden;
-  //height: 100%;
+
+  @media #{$brk-xlarge} {
+    min-width: 100%;
+  }
+
+  @media #{$brk-large} {
+    min-width: 100%;
+  }
+
+  @media #{$brk-medium} {
+    min-width: 100%;
+  }
+
+  @media #{$brk-spnarrow} {
+    width: 100%;
+
+
+  }
+
+  @media #{$brk-iphone} {
+    width: 100%;
+
+  }
 }
+
 
 svg {
   width: 100%;
@@ -385,3 +447,9 @@ h2.double:after {
 .links {
   cursor:pointer;
 }
+
+.grow {
+  transition: all .2s ease-in-out;
+  cursor:pointer;
+}
+.grow:hover { transform: scale(1.1); }

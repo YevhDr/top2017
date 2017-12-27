@@ -318,6 +318,7 @@ h1 {
 
 h2 {
   text-align: center;
+  font-family: monospace !important;
   font-size: 2rem !important;
   color: #ffffff;
   margin-bottom: 40px !important;
@@ -326,10 +327,28 @@ h2 {
 
 h3 {
   color: #FAA61A !important;
-  font-size: 2.3em !important;
-  line-height: 3em;
   margin-top: 0;
   margin-bottom: .5em; }
+  @media (max-width: 2570px) {
+    h3 {
+      font-size: 2.3em !important;
+      line-height: 3em; } }
+  @media (max-width: 1440px) {
+    h3 {
+      font-size: 2.3em !important;
+      line-height: 3em; } }
+  @media (max-width: 1285px) {
+    h3 {
+      font-size: 2.3em !important;
+      line-height: 3em; } }
+  @media (max-width: 767px) {
+    h3 {
+      font-size: 1.8em !important;
+      line-height: 2em; } }
+  @media (max-width: 374px) {
+    h3 {
+      font-size: 1.8em !important;
+      line-height: 3em; } }
 
 h4 {
   font-family: monospace !important;
@@ -383,12 +402,17 @@ a:hover {
   width: 45px; }
 
 .photo {
-  height: 50vh;
   width: auto;
   position: relative;
   line-height: 0;
   overflow: hidden;
   margin-bottom: 3px; }
+  @media only screen and (max-width: 2570px), only screen and (max-width: 1440px), only screen and (max-width: 1285px), only screen and (max-width: 1024px) {
+    .photo {
+      height: 50vh; } }
+  @media (max-width: 767px), (max-width: 374px) {
+    .photo {
+      height: 100% !important; } }
 
 .articles {
   margin-left: 8px;
@@ -488,8 +512,22 @@ img {
 
 video {
   position: relative;
-  min-width: 100%;
   overflow: hidden; }
+  @media (max-width: 2570px) {
+    video {
+      min-width: 100%; } }
+  @media (max-width: 1440px) {
+    video {
+      min-width: 100%; } }
+  @media (max-width: 1285px) {
+    video {
+      min-width: 100%; } }
+  @media (max-width: 767px) {
+    video {
+      width: 100%; } }
+  @media (max-width: 374px) {
+    video {
+      width: 100%; } }
 
 svg {
   width: 100%; }
@@ -597,5 +635,12 @@ h2.double:after {
 
 .links {
   cursor: pointer; }
+
+.grow {
+  transition: all .2s ease-in-out;
+  cursor: pointer; }
+
+.grow:hover {
+  transform: scale(1.1); }
 
 /*# sourceMappingURL=application.css.map */

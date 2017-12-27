@@ -154,13 +154,19 @@ a:hover {
 
 
  @media only screen and #{$brk-xlarge},
- only screen and #{$brk-large},
- only screen and #{$brk-medium},
- only screen and #{$brk-narrow}{
+ only screen and #{$brk-large}
+ {
    height: 50vh;
   }
 
+  @media only screen and #{$brk-narrow},
+  only screen and #{$brk-medium}{
+  height: 35vh;
+}
 
+  @media (width: 1024px) and (height: 1366px) {
+    height: 25vh
+  }
 
   @media #{$brk-spnarrow},
   #{$brk-iphone} {

@@ -154,13 +154,13 @@ a:hover {
 
 
  @media only screen and #{$brk-xlarge},
- only screen and #{$brk-large}
+ only screen and #{$brk-large},
+ only screen and #{$brk-medium}
  {
    height: 50vh;
   }
 
-  @media only screen and #{$brk-narrow},
-  only screen and #{$brk-medium}{
+  @media only screen and #{$brk-narrow}{
   height: 35vh;
 }
 
@@ -459,3 +459,27 @@ h2.double:after {
   cursor:pointer;
 }
 .grow:hover { transform: scale(1.1); }
+
+
+.video-events {
+
+
+  @media only screen and #{$brk-xlarge},
+  only screen and #{$brk-large},
+  only screen and #{$brk-medium}
+  {
+    margin-top: -250px;
+    margin-left: -500px;
+  }
+
+  @media only screen and #{$brk-narrow}{
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  @media #{$brk-spnarrow},
+  #{$brk-iphone} {
+    margin-left: 0;
+    margin-top: 0;
+  }
+}

@@ -298,7 +298,7 @@ p, li {
   box-sizing: border-box; }
 
 body {
-  font: 1em/1.5 monospace;
+  font: 1em/1.5 monospace !important;
   color: #373737;
   background: #eaeaea;
   margin: 0; }

@@ -466,16 +466,17 @@ h2.double:after {
 
   @media only screen and #{$brk-xlarge},
   only screen and #{$brk-large},
-  only screen and #{$brk-medium}
+  only screen and #{$brk-medium},
+  only screen and #{$brk-narrow}
   {
     margin-top: -250px;
     margin-left: -500px;
   }
 
-  @media only screen and #{$brk-narrow}{
-    margin-top: 0;
-    margin-left: 0;
-  }
+  //@media only screen and #{$brk-narrow}{
+  //  margin-top: 0;
+  //  margin-left: 0;
+  //}
 
   @media #{$brk-spnarrow},
   #{$brk-iphone} {
